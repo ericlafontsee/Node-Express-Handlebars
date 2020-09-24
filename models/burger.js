@@ -2,20 +2,20 @@ var orm = require('../config/orm.js');
 
 var burger_call = {
     all: function(cb) {
-        orm.selectAll(function(res) {
+        orm.all(function(res) {
             cb(res);
         });
     },
 
-    creatBurger: function(name, cb) {
-        orm.insertOne(name, function(res) {
+    create: function(name, cb) {
+        orm.create(name, function(res) {
             cb(res);
         });
     },
 
 
     update: function(newID, cb) {
-        orm.updateOne(newID, function(res) {
+        orm.update(newID, function(res) {
             cb(res);
         });
     }
