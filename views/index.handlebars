@@ -1,31 +1,50 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <img src="assets/img/burger.png" />
-        </div>
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <img src="assets/img/burger.png" />
     </div>
-    <div>
+  </div>
+  
+    <div class="row">
+      <div class="col-md-6">
         {{#each burgers}}
-          {{#unless devoured}}
-            <form action="burgers/eaten/{{id}}" method="POST">
-              <div class="input-group">
-                <li class="form-control">{{id}}: {{burger_name}}</li>
-                  <span class="input-group-btn">
-                    <button class="btn btn-danger devour-btn" type="submit">Devour!</button>
-                  </span>
-              </div>
-            </form>
-          {{/unless}}
+        {{#unless devoured}}
+        {{!-- <form action="burgers/eaten/{{id}}" method="POST"> --}}
+        <div class="input-group">
+          <li class="form-control">{{id}}: {{burger_name}}</li>
+          <span class="input-group-btn">
+            <button class="btn btn-danger devour-btn devour" data-id="{{id}} " type="submit">Devour!</button>
+          </span>
+        </div>
+        {{!-- </form> --}}
+        {{/unless}}
         {{/each}}
       </div>
-    <div class="row">
-    <form class="create-form mx-auto"> 
-        <div class="form-group text-center">
-            <label for="burgerInput">Place your order!</label>
-            <input type="text" class="form-control" id="burgerInput">
-        </div>
-        <button type="submit" class="btn btn-primary mx-auto w-100">Submit</button>
-    </form>
+      <div class="col-md-6">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{!-- <form action="burgers/eaten/{{id}}" method="PUT"> --}}
+          <div class="input-group">
+            <li class="form-control">{{id}}: {{burger_name}}</li>
+            <span class="input-group-btn">
+              <button class="btn btn-danger delete" data-id="{{id}}" type="submit">Delete!</button>
+            </span>
+          </div>
+        {{!-- </form> --}}
+        {{/if}}
+        {{/each}}
+      </div>
+
     </div>
+  
+  <div class="row">
+    <form class="create-form mx-auto">
+      <div class="form-group text-center">
+        <label for="burgerInput">Place your order!</label>
+        <input type="text" class="form-control" id="burgerInput">
+      </div>
+      <button type="submit" class="btn btn-primary mx-auto w-100">Submit</button>
+    </form>
+  </div>
 
 </div>

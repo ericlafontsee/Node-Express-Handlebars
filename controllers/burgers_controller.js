@@ -21,5 +21,10 @@ router.put("/api/burgers/:id", function(req, res) {
         res.json("Success");
     });
 });
+router.delete("/api/burgers/:id", function(req, res) {
+    burger.delete(req.params.id, function() {
+        res.json("Success");
+    });
+});
 
 module.exports = router;

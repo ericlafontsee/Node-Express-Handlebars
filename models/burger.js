@@ -15,7 +15,13 @@ var burger_call = {
 
 
     update: function(newID, cb) {
+        console.log("Update Models", newID);
         orm.update(newID, function(res) {
+            cb(res);
+        });
+    },
+    delete: function(newID, cb) {
+        orm.delete(newID, function(res) {
             cb(res);
         });
     }
