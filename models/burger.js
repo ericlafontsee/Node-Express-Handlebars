@@ -8,7 +8,7 @@ var burger_call = {
     },
 
     creatBurger: function(name, cb) {
-        orm.insertOne(function(res) {
+        orm.insertOne(name, function(res) {
             cb(res);
         });
     },

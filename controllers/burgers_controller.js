@@ -22,4 +22,4 @@ router.post("/burgers/eaten/:id", function(req, res) {
     });
 });
 
-module.exports = burger_router;
+module.exports = router;
