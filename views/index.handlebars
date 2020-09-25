@@ -1,11 +1,14 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-md-4 mx-auto">
-      <img src="assets/img/burger.png" />
+    <div class="col-md-6 mx-auto mb-3 mt-3">
+      <img class="burger"src="assets/img/burger.png" />
+      <h1>EAT-DA-BURGER!</h1>
     </div>
   </div>
+
   
-    <div class="row">
+ 
+    <div class="row m-3">
       <div class="col-md-6">
         {{#each burgers}}
         {{#unless devoured}}
@@ -13,7 +16,7 @@
         <div class="input-group">
           <li class="form-control">{{id}}: {{burger_name}}</li>
           <span class="input-group-btn">
-            <button class="btn btn-danger devour-btn devour" data-id="{{id}} " type="submit">Devour!</button>
+            <button class="btn btn-dark devour-btn devour " data-id="{{id}} " type="submit" data-toggle="button" aria-pressed="false">Devour!</button>
           </span>
         </div>
         {{!-- </form> --}}
@@ -27,7 +30,7 @@
           <div class="input-group">
             <li class="form-control">{{id}}: {{burger_name}}</li>
             <span class="input-group-btn">
-              <button class="btn btn-danger delete" data-id="{{id}}" type="submit">Delete!</button>
+              <button class="btn btn-danger delete" data-id="{{id}}" data-toggle="button" aria-pressed="false" type="submit">Delete!</button>
             </span>
           </div>
         {{!-- </form> --}}
@@ -43,7 +46,7 @@
         <label for="burgerInput">Place your order!</label>
         <input type="text" class="form-control" id="burgerInput">
       </div>
-      <button type="submit" class="btn btn-primary mx-auto w-100">Submit</button>
+      <button type="submit" class="btn btn-dark mx-auto w-100" data-toggle="button" aria-pressed="false">Submit</button>
     </form>
   </div>
 

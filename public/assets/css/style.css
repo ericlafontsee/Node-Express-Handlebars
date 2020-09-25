@@ -1,9 +1,28 @@
 body {
-    background: #dfbf7b;
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 50px;
+    display: inline;
+    vertical-align: bottom;
 }
 
 img {
-    width: 100%;
+    width: 20%;
+    height: 80%;
     margin: 0 auto;
-    padding: 0;
+    display: inline;
+}
+
+.btn-dark {
+    border: 2px outset white;
+}
+
+input {
+    background: #DCE8EB;
+    color: black;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 2px inset black;
 }
