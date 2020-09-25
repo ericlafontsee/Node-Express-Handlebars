@@ -7,26 +7,24 @@
   </div>
 
   
- 
+ {{!-- Takes in the burger name input when the submit button is clicked --}}
     <div class="row m-3">
       <div class="col-md-6">
         {{#each burgers}}
         {{#unless devoured}}
-        {{!-- <form action="burgers/eaten/{{id}}" method="POST"> --}}
         <div class="input-group">
           <li class="form-control">{{id}}: {{burger_name}}</li>
           <span class="input-group-btn">
             <button class="btn btn-dark devour-btn devour " data-id="{{id}} " type="submit" data-toggle="button" aria-pressed="false">Devour!</button>
           </span>
         </div>
-        {{!-- </form> --}}
         {{/unless}}
         {{/each}}
       </div>
+      {{!-- When the devoured button is clicked, burgers populate here --}}
       <div class="col-md-6">
         {{#each burgers}}
         {{#if devoured}}
-        {{!-- <form action="burgers/eaten/{{id}}" method="PUT"> --}}
           <div class="input-group">
             <li class="form-control">{{id}}: {{burger_name}}</li>
             <span class="input-group-btn">
@@ -36,7 +34,6 @@
 </svg></button>
             </span>
           </div>
-        {{!-- </form> --}}
         {{/if}}
         {{/each}}
       </div>

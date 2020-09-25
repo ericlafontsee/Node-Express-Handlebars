@@ -1,6 +1,6 @@
 # Eat-Da-Burger!
 ## Description
-For this project, I created a burger logger that follows the MVC design patten. 
+For this project, I created a burger logger that follows the MVC design pattern. 
 Eat-Da-Burger lets users submit a type of burger. This burger is populated on   
 the left side of the screen with an option to devour it. When the devour button   
 is clicked, the burger will then populate to the right side of the screen with  
